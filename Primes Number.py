@@ -1,16 +1,20 @@
-# print all prime numbers between 2 and 50
+# print all prime numbers between 2 and every number that you want
 
-this_number = int(input("enter a number: "))
+first_num = int(input("enter first number: "))
+second_num = int(input("enter second number: "))
 
-while (this_number < 51):
+if (first_num > second_num):
+    print("your first number should be smaller than second one.")
+
+while (first_num < second_num):
     is_prime_number = True
-    counter = 'this_number'
-    while (counter < this_number -1):
-        if ((this_number % counter) == 0):
+    counter = 2
+    while (counter < first_num -1):
+        if ((first_num % counter) == 0):
             is_prime_number = False
         counter = counter + 1
         
     if (is_prime_number == True):
-         print(this_number)
+         print(first_num)
          
-    this_number = this_number + 1
+    first_num = first_num + 1
